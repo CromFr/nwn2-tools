@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"  media="screen,projection"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+	<nav>
+		<div class="nav-wrapper light-blue">
+			<a href="#" class="brand-logo">NWN2 multi-platform / standalone tools</a>
+			<ul id="nav-mobile" class="right">
+				<li><a href="https://github.com/CromFr/nwn2-tools">GitHub</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<ul class="collapsible">
+			<li class="active">
+				<div class="collapsible-header"><code>nwn-stagingtool</code></div>
+				<div class="collapsible-body">
+					<p>
+						Generate and update <code>moduledownloaderresources.xml</code> and compressed client files
+						(ie <code>.lzma</code>), with content taken from a set of directories.
+					</p>
+					<table>
+						<thead><tr><th>Version</th><th>Platform</th><th>Link</th></tr></thead>
+						<tbody>
+							<tr> <td>master</td><td>Windows x86/x86_64</td><td><a href="win-x86/nwn-stagingtool" download="nwn-stagingtool.exe">Download</a></td> </tr>
+							<tr> <td>master</td><td>Linux x86</td><td><a href="linux-x86/nwn-stagingtool" download="nwn-stagingtool">Download</a></td> </tr>
+							<tr> <td>master</td><td>Linux x86_64</td><td><a href="linux-x86_64/nwn-stagingtool" download="nwn-stagingtool">Download</a></td> </tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		M.AutoInit();
+	</script>
+</body>
+</html>
