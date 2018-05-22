@@ -2,7 +2,7 @@
 
 These tools should work the same on any OS. Please open an issue if you see any inconsistency.
 
-### [nwn-stagingtool](nwn-stagingtool/)
+### [nwn2-stagingtool](stagingtool/)
 
 Generate and update `moduledownloaderresources.xml` and compressed client files
 (ie `.lzma`), with content taken from a set of directories.

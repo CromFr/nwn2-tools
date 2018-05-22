@@ -17,16 +17,16 @@ been added / removed since last use of the tool.
 ## Usage
 
 ```bash
-nwn-stagingtool --help
+nwn2-stagingtool --help
 # Scan resource directories to find .hak, .tlk, .bmu, .trx files and generate client files to output_folder
-# nwn-stagingtool output_folder resource_folder1 [resource_folder2 ...]
+# nwn2-stagingtool output_folder resource_folder1 [resource_folder2 ...]
 # -o    --xml-out Path to moduledownloaderresources.xml. If existing, will read it to only generate modified client files. '-' to print to stdout.
 # -f      --force Generate all client files even if they have not been modified
 #    --extensions Set the default file extensions to add to the client files list. Default: [trx, hak, bmu, tlk]
 # -v    --verbose Print all file operations
 # -h       --help This help information.
 
-nwn-stagingtool -o moduledownloaderresources.xml ClientFiles/ $NWN_DOCS/modules/YourMod $NWN_DOCS/hak $NWN_DOCS/tlk $NWN_DOCS/music
+nwn2-stagingtool -o moduledownloaderresources.xml ClientFiles/ $NWN_DOCS/modules/YourMod $NWN_DOCS/hak $NWN_DOCS/tlk $NWN_DOCS/music
 # Search for client files inside the module, hak, tlk and music directories, and place compressed files inside ClientFiles/
 ```
 
