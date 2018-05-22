@@ -2,21 +2,30 @@ language: d
 d: dmd
 
 before_install:
-    # - sudo add-apt-repository --yes ppa:tobydox/mingw-w64
-    - sudo add-apt-repository --yes ppa:tobydox/mingw-x-trusty
-    - sudo apt-get -qq update
-    - sudo apt-get install -y gcc-multilib mingw32-x-gcc mingw32-x-binutils
-    - .travis/build-win32.sh before_install
-    - git clone https://github.com/CromFr/nwn-lib-d.git ../nwn-lib-d
-    - dub add-local ../nwn-lib-d
-    - .travis/build-win32.sh exec dub add-local ../nwn-lib-d
+    # Install packages
+    # - >
+    #     sudo add-apt-repository --yes ppa:tobydox/mingw-x-trusty
+    #     && sudo apt-get -qq update
+    #     && sudo apt-get install -y gcc-multilib mingw32-x-gcc mingw32-x-binutils
+
+    - sudo apt-get install -y gcc-multilib
+    # Setup windows compilers
+    - >
+        .travis/build-win32.sh before_install
+        && source .travis/build-win32.sh
+    # Register nwn-lib-d
+    - >
+        git clone https://github.com/CromFr/nwn-lib-d.git ../nwn-lib-d
+        && dub add-local ../nwn-lib-d
+        && wine dub add-local ../nwn-lib-d
 
 
 
 script:
     # nwn2-stagingtool
     - >
-        mkdir linux-x86
+        source .travis/build-win32.sh
+        && mkdir linux-x86
         && mkdir linux-x86_64
         && mkdir win-x86
     - >
@@ -33,11 +42,8 @@ script:
         && cd ..
     - >
         cd stagingtool
-        && OLDPATH=$PATH
-        && export PATH=/opt/mingw32/bin:/usr/i586-mingw32msvc/bin:$PATH
-        && make win-x86
-        && ../.travis/build-win32.sh exec dub build --arch=x86 -b release
+        && make wine-dmc
+        && wine dub build --arch=x86 -b release
         && mv nwn2-stagingtool.exe ../win-x86/nwn2-stagingtool
-        && export PATH=$OLDPATH
         && cd ..
 

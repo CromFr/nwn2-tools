@@ -6,4 +6,5 @@ license "GPL-3.0"
 
 dependency "nwn-lib-d" version="*"
 
-sourceFiles "source/app.d" "lzma.o"
+sourceFiles "lzma.o" platform="posix"
+sourceFiles "liblzma.lib" platform="windows"
