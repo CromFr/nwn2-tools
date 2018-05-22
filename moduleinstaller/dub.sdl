@@ -1,0 +1,5 @@
+name "nwn2-moduleinstaller"
+description "Strip and install module into optimal directories for server usage"
+authors "Thibaut CHARLES"
+copyright "Copyright © 2017, Thibaut CHARLES"
+license "GPL-3.0"
