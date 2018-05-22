@@ -7,29 +7,33 @@ before_install:
     - sudo apt-get -qq update
     - sudo apt-get install -y gcc-multilib libevent-dev mingw32-x-gcc mingw32-x-binutils
     - .travis/build-win32.sh before_install
+    - git clone https://github.com/CromFr/nwn-lib-d.git ../nwn-lib-d
+    - dub add-local ../nwn-lib-d
 
 
 
 script:
-    - |
+    - >
         mkdir linux-x86
-        mkdir linux-x86_64
-        mkdir win-x86
-
-    - |
+        && mkdir linux-x86_64
+        && mkdir win-x86
+    - >
         cd nwn-stagingtool
+        && make GCCFLAGS="-m32" LDFLAGS="-melf_i386"
+        && dub build --arch=x86 -b release
+        && mv nwn-stagingtool ../linux-x86/
+        && cd ..
+    - >
+        cd nwn-stagingtool
+        && make GCCFLAGS="-m64"
+        && dub build --arch=x86_64 -b release
+        && mv nwn-stagingtool ../linux-x86_64/
+        && cd ..
+    - >
+        cd nwn-stagingtool
+        && export PATH=/opt/mingw32/bin:/usr/i586-mingw32msvc/bin:$PATH
+        && make win-x86
+        && ../.travis/build-win32.sh exec dub build --arch=x86 -b release
+        && mv nwn-stagingtool.exe ../win-x86/nwn-stagingtool
+        && cd ..
 
-        make GCCFLAGS=-m32
-        dub build --arch=x86 -b release
-        mv nwn-stagingtool ../linux-x86/
-
-        make GCCFLAGS=-m64
-        dub build --arch=x86_64 -b release
-        mv nwn-stagingtool ../linux-x86_64/
-
-        export PATH=/opt/mingw32/bin:/usr/i586-mingw32msvc/bin:$PATH
-        make win-x86
-        .travis/build-win32.sh exec dub build --arch=x86 -b release
-        mv nwn-stagingtool.exe ../win-x86/nwn-stagingtool
-
-        cd ..
