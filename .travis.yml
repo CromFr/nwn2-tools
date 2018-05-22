@@ -3,11 +3,6 @@ d: dmd
 
 before_install:
     # Install packages
-    # - >
-    #     sudo add-apt-repository --yes ppa:tobydox/mingw-x-trusty
-    #     && sudo apt-get -qq update
-    #     && sudo apt-get install -y gcc-multilib mingw32-x-gcc mingw32-x-binutils
-
     - sudo apt-get install -y gcc-multilib
     # Setup windows compilers
     - >
@@ -46,4 +41,7 @@ script:
         && wine dub build --arch=x86 -b release
         && mv nwn2-stagingtool.exe ../win-x86/nwn2-stagingtool
         && cd ..
+
+after_success:
+    - .travis/gh-pages.sh
 
