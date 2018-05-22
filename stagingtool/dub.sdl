@@ -4,7 +4,5 @@ authors "Thibaut CHARLES"
 copyright "Copyright © 2017, Thibaut CHARLES"
 license "GPL-3.0"
 
-dependency "nwn-lib-d" version="*"
-
 sourceFiles "lzma.o" platform="posix"
 sourceFiles "liblzma.lib" platform="windows"

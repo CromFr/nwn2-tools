@@ -17,12 +17,13 @@ before_install:
 
 
 script:
-    # nwn2-stagingtool
     - >
         source .travis/build-win32.sh
         && mkdir linux-x86
         && mkdir linux-x86_64
         && mkdir win-x86
+
+    # nwn2-stagingtool
     - >
         cd stagingtool
         && make GCCFLAGS="-m32" LDFLAGS="-melf_i386"
@@ -40,6 +41,23 @@ script:
         && make wine-dmc
         && wine dub build --arch=x86 -b release
         && mv nwn2-stagingtool.exe ../win-x86/nwn2-stagingtool
+        && cd ..
+
+    # nwn2-moduleinstaller
+    - >
+        cd moduleinstaller
+        && dub build --arch=x86 -b release
+        && mv nwn2-moduleinstaller ../linux-x86/
+        && cd ..
+    - >
+        cd moduleinstaller
+        && dub build --arch=x86_64 -b release
+        && mv nwn2-moduleinstaller ../linux-x86_64/
+        && cd ..
+    - >
+        cd moduleinstaller
+        && wine dub build --arch=x86 -b release
+        && mv nwn2-moduleinstaller.exe ../win-x86/nwn2-moduleinstaller
         && cd ..
 
 after_success:
