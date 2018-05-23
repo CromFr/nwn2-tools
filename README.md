@@ -16,3 +16,7 @@ Generate and update `moduledownloaderresources.xml` and compressed client files
 ### [nwn2-moduleinstaller](moduleinstaller/)
 
 Strip & install module files to appropriate directories very fast. Your module need to be versioned with git.
+
+### [nwn2-itemupdater](itemupdater/)
+
+Update all items contained in the character files in the servervault, and stored inside MySQL compatible DB, using the latest blueprint from your module.
