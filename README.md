@@ -12,3 +12,7 @@ Latest version of the tools can be downloaded here: https://cromfr.github.io/nwn
 
 Generate and update `moduledownloaderresources.xml` and compressed client files
 (ie `.lzma`), with content taken from a set of directories.
+
+### [nwn2-moduleinstaller](moduleinstaller/)
+
+Strip & install module files to appropriate directories very fast. Your module need to be versioned with git.
