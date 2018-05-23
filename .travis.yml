@@ -60,6 +60,23 @@ script:
         && mv nwn2-moduleinstaller.exe ../win-x86/nwn2-moduleinstaller
         && cd ..
 
+    # nwn2-itemupdater
+    - >
+        cd itemupdater
+        && dub build --arch=x86 -b release
+        && mv nwn2-itemupdater ../linux-x86/
+        && cd ..
+    - >
+        cd itemupdater
+        && dub build --arch=x86_64 -b release
+        && mv nwn2-itemupdater ../linux-x86_64/
+        && cd ..
+    - >
+        cd itemupdater
+        && wine dub build --arch=x86 -b release
+        && mv nwn2-itemupdater.exe ../win-x86/nwn2-itemupdater
+        && cd ..
+
 after_success:
     - .travis/gh-pages.sh
 
