@@ -30,6 +30,7 @@ rm -rf *
 cp ../.travis/index.html .
 
 ESC_REPO=$(echo $REPO | sed "s/\//\\\\\//g")
+ESC_REPO=$(echo $ESC_REPO | sed "s/.git//g")
 sed -i "s/__VERSION__/<a class=\"tooltipped\" data-tooltip=\"$TRAVIS_BRANCH - $(date +'%Y\/%m\/%d %H:%M')\" href=\"$ESC_REPO\/commit\/$SHA\">${SHA:0:10}<\/a>/g" index.html
 
 # binaries
