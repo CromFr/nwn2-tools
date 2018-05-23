@@ -1,0 +1,8 @@
+name "nwn2-itemupdater"
+description "Update items in bic files & sql db"
+license "GPL-3.0"
+copyright "Copyright © 2016, Thibaut CHARLES"
+authors "Thibaut CHARLES"
+
+dependency "nwn-lib-d" version="*"
+dependency "mysql-native" version="~>2.2.2"
