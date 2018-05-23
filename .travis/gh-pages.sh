@@ -29,6 +29,9 @@ rm -rf *
 # Home
 cp ../.travis/index.html .
 
+ESC_REPO=$(echo $REPO | sed "s/\//\\\\\//g")
+sed -i "s/__VERSION__/<a class=\"tooltipped\" data-tooltip=\"$TRAVIS_BRANCH - $(date +'%Y\/%m\/%d %H:%M')\" href=\"$ESC_REPO\/commit\/$SHA\">${SHA:0:10}<\/a>/g" index.html
+
 # binaries
 cp -R ../{linux-x86,linux-x86_64,win-x86} .
 
