@@ -31,10 +31,4 @@ if [[ "$1" == "before_install" ]]; then
 	echo 'Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
 "PATH"="c:\\\\windows;c:\\\\windows\\\\system;c:\\\\dmd\\\\dmd2\\\\windows\\\\bin;c:\\\\dmc\\\\dm\\\\bin"' | wine regedit -
-
-elif [[ "$1" == "exec" ]]; then
-	wine ${@:2}
-else
-	echo "Unknown command $1"
-	exit 1
 fi

@@ -19,7 +19,7 @@ before_install:
 script:
     - >
         source .travis/build-win.sh
-        && mkdir -p bin/{linux,windows}-x86{,_64}
+        && mkdir -p bin/{linux,win}-x86{,_64}
 
     # nwn2-stagingtool
     - >
