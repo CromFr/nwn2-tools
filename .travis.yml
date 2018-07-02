@@ -6,8 +6,8 @@ before_install:
     - sudo apt-get install -y gcc-multilib
     # Setup windows compilers
     - >
-        .travis/build-win32.sh before_install
-        && source .travis/build-win32.sh
+        .travis/build-win.sh before_install
+        && source .travis/build-win.sh
     # Register nwn-lib-d
     - >
         git clone https://github.com/CromFr/nwn-lib-d.git ../nwn-lib-d
@@ -18,63 +18,77 @@ before_install:
 
 script:
     - >
-        source .travis/build-win32.sh
-        && mkdir linux-x86
-        && mkdir linux-x86_64
-        && mkdir win-x86
+        source .travis/build-win.sh
+        && mkdir -p bin/{linux,windows}-x86{,_64}
 
     # nwn2-stagingtool
     - >
         cd stagingtool
-        && make GCCFLAGS="-m32" LDFLAGS="-melf_i386"
+        && make CFLAGS="-m32" LDFLAGS="-melf_i386"
         && dub build --arch=x86 -b release
-        && mv nwn2-stagingtool ../linux-x86/
+        && mv nwn2-stagingtool ../bin/linux-x86/
         && cd ..
     - >
         cd stagingtool
-        && make GCCFLAGS="-m64"
+        && make CFLAGS="-m64"
         && dub build --arch=x86_64 -b release
-        && mv nwn2-stagingtool ../linux-x86_64/
+        && mv nwn2-stagingtool ../bin/linux-x86_64/
         && cd ..
     - >
         cd stagingtool
         && make wine-dmc
         && wine dub build --arch=x86 -b release
-        && mv nwn2-stagingtool.exe ../win-x86/nwn2-stagingtool
+        && mv nwn2-stagingtool.exe ../bin/win-x86/nwn2-stagingtool
         && cd ..
+    # - >
+    #     cd stagingtool
+    #     && make wine-dmc CFLAGS="-m64"
+    #     && wine dub build --arch=x86_64 -b release
+    #     && mv nwn2-stagingtool.exe ../bin/win-x86_64/nwn2-stagingtool
+    #     && cd ..
 
     # nwn2-moduleinstaller
     - >
         cd moduleinstaller
         && dub build --arch=x86 -b release
-        && mv nwn2-moduleinstaller ../linux-x86/
+        && mv nwn2-moduleinstaller ../bin/linux-x86/
         && cd ..
     - >
         cd moduleinstaller
         && dub build --arch=x86_64 -b release
-        && mv nwn2-moduleinstaller ../linux-x86_64/
+        && mv nwn2-moduleinstaller ../bin/linux-x86_64/
         && cd ..
     - >
         cd moduleinstaller
         && wine dub build --arch=x86 -b release
-        && mv nwn2-moduleinstaller.exe ../win-x86/nwn2-moduleinstaller
+        && mv nwn2-moduleinstaller.exe ../bin/win-x86/nwn2-moduleinstaller
+        && cd ..
+    - >
+        cd moduleinstaller
+        && wine dub build --arch=x86_64 -b release
+        && mv nwn2-moduleinstaller.exe ../bin/win-x86_64/nwn2-moduleinstaller
         && cd ..
 
     # nwn2-itemupdater
     - >
         cd itemupdater
         && dub build --arch=x86 -b release
-        && mv nwn2-itemupdater ../linux-x86/
+        && mv nwn2-itemupdater ../bin/linux-x86/
         && cd ..
     - >
         cd itemupdater
         && dub build --arch=x86_64 -b release
-        && mv nwn2-itemupdater ../linux-x86_64/
+        && mv nwn2-itemupdater ../bin/linux-x86_64/
         && cd ..
     - >
         cd itemupdater
         && wine dub build --arch=x86 -b release
-        && mv nwn2-itemupdater.exe ../win-x86/nwn2-itemupdater
+        && mv nwn2-itemupdater.exe ../bin/win-x86/nwn2-itemupdater
+        && cd ..
+    - >
+        cd itemupdater
+        && wine dub build --arch=x86_64 -b release
+        && mv nwn2-itemupdater.exe ../bin/win-x86_64/nwn2-itemupdater
         && cd ..
 
 after_success:
