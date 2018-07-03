@@ -85,11 +85,11 @@ script:
         && wine dub build --arch=x86 -b release
         && mv nwn2-itemupdater.exe ../bin/win-x86/nwn2-itemupdater
         && cd ..
-    - >
-        cd itemupdater
-        && wine dub build --arch=x86_64 -b release
-        && mv nwn2-itemupdater.exe ../bin/win-x86_64/nwn2-itemupdater
-        && cd ..
+    # - >
+    #     cd itemupdater
+    #     && wine dub build --arch=x86_64 -b release
+    #     && mv nwn2-itemupdater.exe ../bin/win-x86_64/nwn2-itemupdater
+    #     && cd ..
 
 after_success:
     - .travis/gh-pages.sh
