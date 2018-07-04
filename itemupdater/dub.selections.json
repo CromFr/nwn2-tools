@@ -8,7 +8,7 @@
 		"libevent": "2.0.2+2.0.16",
 		"memutils": "0.4.11",
 		"mysql-native": "2.2.2",
-		"nwn-lib-d": "0.0.2",
+		"nwn-lib-d": "~master",
 		"stdx-allocator": "2.77.2",
 		"taggedalgebraic": "0.10.11",
 		"unit-threaded": "0.7.46",
