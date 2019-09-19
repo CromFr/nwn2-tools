@@ -13,7 +13,7 @@ if [[ "$1" == "before_install" ]]; then
 	sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 
 	sudo apt-get update
-	sudo apt-get install --install-recommends -y winehq-stable p7zip
+	sudo apt-get install --install-recommends -y --allow-unauthenticated winehq-stable p7zip
 	# gcc-mingw-w64-{i686,x86-64}
 
 	wineboot
