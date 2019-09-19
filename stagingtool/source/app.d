@@ -61,6 +61,7 @@ int main(string[] args)
 	string[] extensions = ["trx", "hak", "bmu", "tlk"];
 	uint threads = 0;
 	string sinceStr = null;
+	bool incremental = false;
 
 	auto res = getopt(args, config.passThrough,
 		"o|xml-out", "Path to moduledownloaderresources.xml. If existing, will read it to only generate modified client files. '-' to print to stdout.", &xmlPath,
@@ -69,6 +70,7 @@ int main(string[] args)
 		"since", "Only check files modified after a given date. Other files will still be listed, but no modification will be detected."
 			~" Files will still be processed if the LZMA files does not exist."
 			~" Date must be in YYYY-MM-DDTHH:MM:SS format (ISO ext) or a UNIX timestamp", &sinceStr,
+		"i|incremental", "Store last execution date in moduledownloaderresources.xml, and pass the value to --since. Mutually exclusive with --since.", &incremental,
 		"j","Number of concurrent threads to use for compressing files", &threads,
 		"verbose|v","Print all file operations", &verbose,
 		);
@@ -96,8 +98,13 @@ int main(string[] args)
 		xmlPath = buildPath(outPath, "moduledownloaderresources.xml");
 	}
 
+	if(incremental){
+		assert(sinceStr is null, "Cannot provide both --since and --incremental");
+	}
+
 	Nullable!SysTime since;
 	if(sinceStr !is null){
+
 		try since = SysTime.fromUnixTime(sinceStr.to!long);
 		catch(ConvException){
 			since = SysTime(DateTime.fromISOExtString(sinceStr));
@@ -126,6 +133,15 @@ int main(string[] args)
 	Resource[string] previousResources;
 	if(xmlPath != "-" && xmlPath.exists){
 		auto parser = new DocumentParser(xmlPath.readText);
+		if(incremental){
+			parser.onStartTag["gen-date"] = (ElementParser xml){
+				xml.onText = (string dateStr){
+					since = cast(SysTime)DateTime.fromISOExtString(dateStr);
+					logDebug("Previous generation date: ", cast(DateTime)since.get);
+				};
+				xml.parse();
+			};
+		}
 		parser.onStartTag["resource"] = (ElementParser xml){
 			const name = xml.tag.attr["name"].toLower;
 			const type = xml.tag.attr["type"].to!(Resource.ResType);
@@ -202,6 +218,9 @@ int main(string[] args)
 	//Generate XML
 	string xml = `<?xml version="1.0" encoding="utf-8"?>`~"\n";
 	xml ~= `<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">` ~ "\n";
+	if(incremental){
+		xml ~= "  <gen-date>" ~ (cast(DateTime)Clock.currTime()).toISOExtString() ~ "</gen-date>\n";
+	}
 	foreach(const ref resource ; resources){
 		xml ~= "  " ~ resource.toXml(serversListXml) ~ "\n";
 	}
