@@ -20,7 +20,8 @@ if [[ "$1" == "before_install" ]]; then
 
 	INSTALL_DIR=$WINEPREFIX/drive_c/dmd
 
-	DMD_VERSION=`dmd --version | grep -P -o "2\.\d{3}\.\d"`
+	#DMD_VERSION=`dmd --version | grep -P -o "2\.\d{3}\.\d"`
+	DMD_VERSION=2.080.1
 	wget http://downloads.dlang.org/releases/2.x/${DMD_VERSION}/dmd.${DMD_VERSION}.windows.7z -O /tmp/dmd.7z
 	7zr x -o$INSTALL_DIR /tmp/dmd.7z
 
