@@ -12,6 +12,8 @@ import std.parallelism;
 import std.typecons;
 import std.datetime;
 
+import nwnlibd.path;
+
 
 
 extern(C) int main2(int numArgs, const char** args, char *rs);
@@ -95,7 +97,7 @@ int main(string[] args)
 
 
 	if(xmlPath is null){
-		xmlPath = buildPath(outPath, "moduledownloaderresources.xml");
+		xmlPath = buildPathCI(outPath, "moduledownloaderresources.xml");
 	}
 
 	if(incremental){
@@ -114,7 +116,7 @@ int main(string[] args)
 	// Load servers.xml files
 	int[] serversList;
 	foreach(ref path ; resPaths){
-		auto serversFile = buildPath(path, "servers.xml");
+		auto serversFile = buildPathCI(path, "servers.xml");
 		if(serversFile.exists && serversFile.isFile){
 			auto parser = new DocumentParser(serversFile.readText);
 			parser.onStartTag["server"] = (ElementParser xml){
@@ -162,12 +164,11 @@ int main(string[] args)
 	}
 
 	// Generate new resource list
-	Tuple!(DirEntry, string)[] newResourceEntries;
+	DirEntry[] resourceFiles;
 	foreach(resPath ; resPaths){
 		foreach(file ; resPath.dirEntries(SpanMode.shallow)){
 			if(file.extension.toLower in extMap){
-				auto expectedRes = file.baseName.toLower in previousResources;
-				newResourceEntries ~= Tuple!(DirEntry, string)(file, expectedRes is null? null : expectedRes.resHash);
+				resourceFiles ~= file;
 			}
 		}
 	}
@@ -177,23 +178,32 @@ int main(string[] args)
 		defaultPoolThreads = threads;
 
 	Resource[] resources;
-	resources.length = newResourceEntries.length;
-	foreach(i, resEntry ; newResourceEntries.parallel){
-		const resName = resEntry[0].baseName.toLower;
+	resources.length = resourceFiles.length;
+	foreach(i, resDirEntry ; resourceFiles.parallel){
+		const resName = resDirEntry.baseName.toLower;
 
-		if(!since.isNull && resEntry[0].timeLastModified < since.get && resName in previousResources && buildPath(outPath, resName~".lzma").exists){
+		if(!since.isNull && resDirEntry.timeLastModified < since.get && resName in previousResources && buildPathCI(outPath, resName~".lzma").exists){
 			// Insert previous entry
-			logDebug("Skipped ", resEntry[0], " (mtime too old)");
+			logDebug("Skipped ", resDirEntry, " (mtime too old)");
 			resources[i] = previousResources[resName];
 		}
 		else{
 			// Process resource file
-			logDebug("Processing ", resEntry[0]);
-			resources[i] = Resource(resEntry[0], resEntry[1], outPath, force);
+			logDebug("Processing ", resDirEntry);
+			string prevHash = resName in previousResources ? previousResources[resName].resHash : null;
+			resources[i] = Resource(resDirEntry, prevHash, outPath, force);
+			string newHash = resources[i].resHash;
+
+			if(prevHash is null)
+				info("New file: '", resName, "' ('", resDirEntry, "')");
+			else if(prevHash != newHash)
+				info("Modified file: ", resName, "' ('", resDirEntry, "')");
+			else
+				logDebug("Unmodified file: ", resName, "' ('", resDirEntry, "')");
 		}
 	}
 
-	// Mark existing files
+	// Remove kept files from previousResources
 	foreach(ref resource ; resources) {
 
 		auto expectedRes = resource.name in previousResources;
@@ -204,7 +214,7 @@ int main(string[] args)
 	// Warn for removed files
 	foreach(ref res ; previousResources){
 		warning("Removed file: ", res.name);
-		const lzma = buildPath(outPath, res.name ~ ".lzma");
+		const lzma = buildPathCI(outPath, res.name ~ ".lzma");
 		if(lzma.exists)
 			logDebug("Delete file: ", lzma);
 			lzma.remove();
@@ -238,7 +248,7 @@ int main(string[] args)
 
 struct Resource{
 	this(in DirEntry resFile, in string expectedResHash, in DirEntry outputDir, bool force){
-		name = resFile.baseName;
+		name = resFile.baseName.toLower;
 		switch(name.extension.toLower){
 			case ".trx": type = ResType.DirectoryEntry; break;
 			case ".hak": type = ResType.Hak; break;
@@ -247,29 +257,15 @@ struct Resource{
 			default: assert(0, "Unknown resource extension");
 		}
 
-		bool genDlFile = false;
 
 		import std.digest.sha;
 		immutable data = cast(immutable ubyte[])readFile(resFile);
 		resSize = data.length;
 		resHash = data.sha1Of.toHexString.idup;
 
-		auto dlFilePath = buildPath(outputDir, name~".lzma");
+		auto dlFilePath = buildPathCI(outputDir, name~".lzma");
 
-
-		if(expectedResHash is null){
-			genDlFile = true;
-			info("New file: '", name, "' ('", resFile, "')");
-		}
-		else if(resHash != expectedResHash){
-			genDlFile = true;
-			info("Modified file: ", name, "' ('", resFile, "')");
-		}
-		else if(!dlFilePath.exists){
-			genDlFile = true;
-		}
-
-		if(genDlFile){
+		if(expectedResHash is null || resHash != expectedResHash || !dlFilePath.exists){
 			logDebug("Compressing ", name);
 
 			auto res = Lzma(["lzma", "e", resFile.name, dlFilePath]);
@@ -282,7 +278,7 @@ struct Resource{
 	}
 
 	this(in string name, in ResType type, in string resHash, in size_t resSize, in string dlHash, in size_t dlSize){
-		this.name = name;
+		this.name = name.toLower;
 		this.type = type;
 		this.resHash = resHash;
 		this.resSize = resSize;
