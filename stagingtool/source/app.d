@@ -135,14 +135,14 @@ int main(string[] args)
 	Resource[string] previousResources;
 	if(xmlPath != "-" && xmlPath.exists){
 		auto parser = new DocumentParser(xmlPath.readText);
-		if(incremental){
-			parser.onStartTag["gen-date"] = (ElementParser xml){
-				xml.onText = (string dateStr){
-					since = cast(SysTime)DateTime.fromISOExtString(dateStr);
-					logDebug("Previous generation date: ", cast(DateTime)since.get);
-				};
-				xml.parse();
-			};
+		if(incremental && "gen-date" in parser.tag.attr){
+			try{
+				since = cast(SysTime)DateTime.fromISOExtString(parser.tag.attr["gen-date"]);
+				logDebug("Previous generation date: ", cast(DateTime)since.get);
+			}
+			catch(DateTimeException e){
+				warning("Previous generation date ignored because malformed: ", e.msg);
+			}
 		}
 		parser.onStartTag["resource"] = (ElementParser xml){
 			const name = xml.tag.attr["name"].toLower;
@@ -227,10 +227,10 @@ int main(string[] args)
 
 	//Generate XML
 	string xml = `<?xml version="1.0" encoding="utf-8"?>`~"\n";
-	xml ~= `<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">` ~ "\n";
-	if(incremental){
-		xml ~= "  <gen-date>" ~ (cast(DateTime)Clock.currTime()).toISOExtString() ~ "</gen-date>\n";
-	}
+	string genDateAttr;
+	if(incremental)
+		genDateAttr = ` gen-date="` ~ (cast(DateTime)Clock.currTime()).toISOExtString() ~ `"`;
+	xml ~= `<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"` ~ genDateAttr ~ `>` ~ "\n";
 	foreach(const ref resource ; resources){
 		xml ~= "  " ~ resource.toXml(serversListXml) ~ "\n";
 	}
