@@ -32,7 +32,7 @@ auto Lzma(string[] args){
 	return Tuple!(int,"status", string,"output")(ret, rs.ptr.fromStringz.dup);
 }
 
-version(Windows) version(X86_64)
+version(Windows)
 extern(C) void* __enclave_config;
 
 __gshared bool verbose = false;

@@ -36,16 +36,14 @@ script:
         && cd ..
     - >
         cd stagingtool
-        && make wine-dmc
         && wine dub build --arch=x86 -b release
         && mv nwn2-stagingtool.exe ../bin/win-x86/nwn2-stagingtool
         && cd ..
-    # - >
-    #     cd stagingtool
-    #     && make wine-dmc CFLAGS="-m64"
-    #     && wine dub build --arch=x86_64 -b release
-    #     && mv nwn2-stagingtool.exe ../bin/win-x86_64/nwn2-stagingtool
-    #     && cd ..
+    - >
+        cd stagingtool
+        && wine dub build --arch=x86_64 -b release
+        && mv nwn2-stagingtool.exe ../bin/win-x86_64/nwn2-stagingtool
+        && cd ..
 
     # nwn2-moduleinstaller
     - >
