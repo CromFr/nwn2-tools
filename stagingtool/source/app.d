@@ -11,6 +11,7 @@ import std.algorithm;
 import std.parallelism;
 import std.typecons;
 import std.datetime;
+import std.digest.sha;
 
 import nwnlibd.path;
 
@@ -259,10 +260,11 @@ struct Resource{
 		}
 
 
-		import std.digest.sha;
-		immutable data = cast(immutable ubyte[])readFile(resFile);
-		resSize = data.length;
-		resHash = data.sha1Of.toHexString.idup;
+		{
+			immutable data = cast(immutable ubyte[])readFile(resFile);
+			resSize = data.length;
+			resHash = data.sha1Of.toHexString.idup;
+		}
 
 		auto dlFilePath = buildPathCI(outputDir, name~".lzma");
 
@@ -273,9 +275,11 @@ struct Resource{
 			enforce(res.status == 0, "lzma command failed:\n" ~ res.output);
 		}
 
-		ubyte[] dlData = cast(ubyte[])readFile(dlFilePath);
-		dlSize = dlData.length;
-		dlHash = dlData.sha1Of.toHexString.idup;
+		{
+			immutable dlData = cast(immutable ubyte[])readFile(dlFilePath);
+			dlSize = dlData.length;
+			dlHash = dlData.sha1Of.toHexString.idup;
+		}
 	}
 
 	this(in string name, in ResType type, in string resHash, in size_t resSize, in string dlHash, in size_t dlSize){
