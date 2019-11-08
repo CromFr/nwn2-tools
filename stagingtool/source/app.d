@@ -279,9 +279,9 @@ struct Resource{
 
 
 		{
-			immutable data = cast(immutable ubyte[])readFile(resFile);
-			resSize = data.length;
-			resHash = data.sha1Of.toHexString.idup;
+			auto file = File(resFile);
+			resHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString();
+			resSize = file.size();
 		}
 
 		auto dlFilePath = buildPathCI(outputDir, name~".lzma");
@@ -294,9 +294,9 @@ struct Resource{
 		}
 
 		{
-			immutable dlData = cast(immutable ubyte[])readFile(dlFilePath);
-			dlSize = dlData.length;
-			dlHash = dlData.sha1Of.toHexString.idup;
+			auto file = File(dlFilePath);
+			dlHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString();
+			dlSize = file.size();
 		}
 	}
 
