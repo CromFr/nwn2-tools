@@ -281,7 +281,7 @@ struct Resource{
 		{
 			auto file = File(resFile);
 			resHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString();
-			resSize = file.size();
+			resSize = file.size().to!size_t;
 		}
 
 		auto dlFilePath = buildPathCI(outputDir, name~".lzma");
@@ -296,7 +296,7 @@ struct Resource{
 		{
 			auto file = File(dlFilePath);
 			dlHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString();
-			dlSize = file.size();
+			dlSize = file.size().to!size_t;
 		}
 	}
 
