@@ -3,7 +3,7 @@ d: dmd
 
 before_install:
     # Install packages
-    - sudo apt-get install -y gcc-multilib
+    - sudo apt-get install -y gcc-multilib zip
     # Setup windows compilers
     - >
         .travis/build-win.sh before_install
@@ -88,6 +88,36 @@ script:
     #     && wine dub build --arch=x86_64 -b release
     #     && mv nwn2-itemupdater.exe ../bin/win-x86_64/nwn2-itemupdater
     #     && cd ..
+
+    # nwn2-cam-to-sql
+    - >
+        cd cam-to-sql
+        && dub build --arch=x86 -b release
+        && dub build --arch=x86 -b release :upgrade-scripts
+        && tar cvz nwn2-cam-to-sql.tar.gz nwn2-cam-to-sql nwn2-cam-to-sql-upgrade-scripts
+        && mv nwn2-cam-to-sql.tar.gz ../bin/linux-x86/
+        && cd ..
+    - >
+        cd cam-to-sql
+        && dub build --arch=x86_64 -b release
+        && dub build --arch=x86_64 -b release :upgrade-scripts
+        && tar cvz nwn2-cam-to-sql.tar.gz nwn2-cam-to-sql nwn2-cam-to-sql-upgrade-scripts
+        && mv nwn2-cam-to-sql.tar.gz ../bin/linux-x86_64/
+        && cd ..
+    - >
+        cd cam-to-sql
+        && wine dub build --arch=x86 -b release
+        && wine dub build --arch=x86 -b release :upgrade-scripts
+        && zip nwn2-cam-to-sql.zip cam-to-sql.exe cam-to-sql-upgrade-scripts.exe
+        && mv nwn2-cam-to-sql.zip ../bin/win-x86/nwn2-cam-to-sql
+        && cd ..
+    - >
+        cd cam-to-sql
+        && wine dub build --arch=x86_64 -b release
+        && wine dub build --arch=x86_64 -b release :upgrade-scripts
+        && zip nwn2-cam-to-sql.zip cam-to-sql.exe cam-to-sql-upgrade-scripts.exe
+        && mv nwn2-cam-to-sql.exe ../bin/win-x86_64/nwn2-cam-to-sql
+        && cd ..
 
 after_success:
     - .travis/gh-pages.sh
