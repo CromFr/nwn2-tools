@@ -28,10 +28,6 @@ enum UpdatePolicy{
 alias ItemPolicy = UpdatePolicy[string];
 
 int main(string[] args){
-	import etc.linux.memoryerror;
-	static if (is(typeof(registerMemoryErrorHandler)))
-		registerMemoryErrorHandler();
-
 	string vaultPath;
 	string modulePath;
 	string tempPath = "itemupdater_tmp";
@@ -375,10 +371,7 @@ int main(string[] args){
 				pressEnter();
 			}
 
-			Prepared sqlSelect = conn.prepare(selectQuery);
-			Prepared sqlUpdate = conn.prepare(updateQuery);
-
-			foreach(ref row ; conn.query(sqlSelect)){
+			foreach(ref row ; conn.query(selectQuery)){
 				auto itemData = row[0].get!(ubyte[]);
 				Variant[] keys;
 				foreach(i, _ ; primaryKeys)
@@ -405,11 +398,12 @@ int main(string[] args){
 						buildPath(backup, keys.map!(to!string).join(".")~".item.gff").writeFile(itemData);
 
 						// Update SQL
-						sqlUpdate.setArg(0, updatedData);
+						Variant[] updateArgs;
+						updateArgs ~= Variant(updatedData);
 						foreach(i, key ; keys)
-							sqlUpdate.setArg(i + 1, key);
+							updateArgs ~= Variant(updatedData);
 
-						auto affectedRows = connPool.lockConnection().exec(sqlUpdate);
+						auto affectedRows = connPool.lockConnection().exec(updateQuery, updateArgs);
 
 						enforce(affectedRows==1, "Wrong number of rows affected by SQL query: "~affectedRows.to!string~" rows affected for item "~target[0]~"["~keys.map!(to!string).join(",")~"]");
 					}
