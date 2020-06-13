@@ -4,7 +4,7 @@ authors "Thibaut CHARLES"
 copyright "Copyright © 2020, Thibaut CHARLES"
 license "GPL-3.0"
 
-dependency "nwn-lib-d" version="0.0.4+commit.39.gee67751"
+dependency "nwn-lib-d" version="==0.0.7"
 dependency "colorize" version="~>1.0.5"
 dependency "mysql-native" version="~>3.0.0"
 

@@ -5,18 +5,18 @@ LDFLAGS=
 all:
 	gcc $(CFLAGS) -O2 -Wall -D_7ZIP_ST -c lzma/Alloc.c lzma/LzFind.c lzma/LzmaDec.c lzma/LzmaEnc.c lzma/7zFile.c lzma/7zStream.c lzma/Util/Lzma/LzmaUtil.c
 	ld $(LDFLAGS) -r Alloc.o LzFind.o LzmaDec.o LzmaEnc.o 7zFile.o 7zStream.o LzmaUtil.o -o lzma.o
+	strip --keep-symbol=main2 lzma.o
 	rm Alloc.o LzFind.o LzmaDec.o LzmaEnc.o 7zFile.o 7zStream.o LzmaUtil.o
-	strip --strip-symbol=main lzma.o
 
+# mingw-i686:
+# 	i686-w64-mingw32-gcc $(CFLAGS) -m32 -O2 -Wall -D_7ZIP_ST -c lzma/Alloc.c lzma/LzFind.c lzma/LzmaDec.c lzma/LzmaEnc.c lzma/7zFile.c lzma/7zStream.c lzma/Util/Lzma/LzmaUtil.c
+# 	i686-w64-mingw32-ld $(LDFLAGS) -r Alloc.o LzFind.o LzmaDec.o LzmaEnc.o 7zFile.o 7zStream.o LzmaUtil.o -o lzma.obj
+# 	i686-w64-mingw32-strip --keep-symbol=_main2 lzma.obj
+# 	# i686-w64-mingw32-strip --strip-symbol=_main lzma.obj
+# 	rm *.o
 
-wine-dmc:
-	wine dmc $(CFLAGS) -D_7ZIP_ST -c lzma/Alloc.c lzma/LzFind.c lzma/LzmaDec.c lzma/LzmaEnc.c lzma/7zFile.c lzma/7zStream.c lzma/Util/Lzma/LzmaUtil.c
-	wine lib -c liblzma.lib *.obj
-	sed -i 's/\x05_main/\x05_____/' liblzma.lib
-
-msvc:
-	# Provided as example, you'll need to set correct executable paths and run sed from a Linux terminal
-	# Tested with VS2015 x64 Native
-	cl /c lzma/*.c lzma/Util/Lzma/*.c
-	lib /out:liblzma.lib *.obj
-	sed -i 's/\x00main\x00/\x00____\x00/' liblzma.lib
+mingw-x86_64:
+	x86_64-w64-mingw32-gcc $(CFLAGS) -O2 -Wall -D_7ZIP_ST -c lzma/Alloc.c lzma/LzFind.c lzma/LzmaDec.c lzma/LzmaEnc.c lzma/7zFile.c lzma/7zStream.c lzma/Util/Lzma/LzmaUtil.c
+	x86_64-w64-mingw32-ld $(LDFLAGS) -r Alloc.o LzFind.o LzmaDec.o LzmaEnc.o 7zFile.o 7zStream.o LzmaUtil.o -o lzma.obj
+	x86_64-w64-mingw32-strip --keep-symbol=main2 lzma.obj
+	rm *.o
