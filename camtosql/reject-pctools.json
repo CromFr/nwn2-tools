@@ -1,0 +1,1395 @@
+[
+    {
+        "campaign_name": "pctools--_kiel__gorion",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "_Kiel_Gorion                    ",
+        "type": "location",
+        "value": {
+            "area": 12513,
+            "facing": -89.637153625488281,
+            "position": [
+                162.256103515625,
+                162.256103515625,
+                162.256103515625
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--41337_frrejuste",
+        "name": "40",
+        "pc_id": "41337Frère Juste               ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--41337_frrejuste",
+        "name": "41",
+        "pc_id": "41337Frère Juste               ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--41337_frrejuste",
+        "name": "42",
+        "pc_id": "41337Frère Juste               ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--abbadon79_narendirte'tenthess",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "Abbadon79Narendir Te'tent       ",
+        "type": "location",
+        "value": {
+            "area": 5112,
+            "facing": -70.816841125488281,
+            "position": [
+                167.51094055175781,
+                167.51094055175781,
+                167.51094055175781
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--abbadon79_narendirte'tenthess",
+        "name": "40",
+        "pc_id": "Abbadon79Narendir Te'tent       ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--abbadon79_narendirte'tenthess",
+        "name": "41",
+        "pc_id": "Abbadon79Narendir Te'tent       ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--abbadon79_narendirte'tenthess",
+        "name": "42",
+        "pc_id": "Abbadon79Narendir Te'tent       ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--av3disk_aachaonvivelame",
+        "name": "40",
+        "pc_id": "Av3diskAachaon Vivelame         ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--av3disk_aachaonvivelame",
+        "name": "41",
+        "pc_id": "Av3diskAachaon Vivelame         ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--av3disk_aachaonvivelame",
+        "name": "42",
+        "pc_id": "Av3diskAachaon Vivelame         ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--av3disk_charlyllomaz",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "Av3diskCharly Llomaz            ",
+        "type": "location",
+        "value": {
+            "area": 35080,
+            "facing": 99.625999450683594,
+            "position": [
+                299.39730834960937,
+                299.39730834960937,
+                299.39730834960937
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--av3disk_katarin",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "Av3diskKatarin                  ",
+        "type": "location",
+        "value": {
+            "area": 31316,
+            "facing": -58.394474029541016,
+            "position": [
+                95.261962890625,
+                95.261962890625,
+                95.261962890625
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--av3disk_mauricollomaz",
+        "name": "40",
+        "pc_id": "Av3diskMaurico Llomaz           ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--av3disk_mauricollomaz",
+        "name": "41",
+        "pc_id": "Av3diskMaurico Llomaz           ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--av3disk_mauricollomaz",
+        "name": "42",
+        "pc_id": "Av3diskMaurico Llomaz           ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--blaireau62_argeuljuhpe",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "Blaireau62Arge Uljuhpe          ",
+        "type": "location",
+        "value": {
+            "area": 10346,
+            "facing": 164.31462097167969,
+            "position": [
+                124.47679138183594,
+                124.47679138183594,
+                124.47679138183594
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--blaireau62_esmeralda",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "Blaireau62Esmeralda             ",
+        "type": "location",
+        "value": {
+            "area": 42986,
+            "facing": 29.107233047485352,
+            "position": [
+                105.07021331787109,
+                105.07021331787109,
+                105.07021331787109
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--blaireau62_sifulermiyal",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "Blaireau62Sifuler Miyal         ",
+        "type": "location",
+        "value": {
+            "area": 1873,
+            "facing": -50.584178924560547,
+            "position": [
+                8.087559700012207,
+                8.087559700012207,
+                8.087559700012207
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--blaireau62_xulziulkafar",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "Blaireau62Xulziul Kafar         ",
+        "type": "location",
+        "value": {
+            "area": 23639,
+            "facing": -8.2253141403198242,
+            "position": [
+                41.199306488037109,
+                41.199306488037109,
+                41.199306488037109
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--crevetola512_jeantrouve",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "crevetola512jean trouve         ",
+        "type": "location",
+        "value": {
+            "area": 9237,
+            "facing": 15.68833065032959,
+            "position": [
+                21.310005187988281,
+                21.310005187988281,
+                21.310005187988281
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--crevetola512_jeantrouve",
+        "name": "40",
+        "pc_id": "crevetola512jean trouve         ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--crevetola512_jeantrouve",
+        "name": "41",
+        "pc_id": "crevetola512jean trouve         ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--crevetola512_jeantrouve",
+        "name": "42",
+        "pc_id": "crevetola512jean trouve         ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--crom29_",
+        "name": "40",
+        "pc_id": "Crom 29*                        ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--crom29_",
+        "name": "41",
+        "pc_id": "Crom 29*                        ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--crom29_",
+        "name": "42",
+        "pc_id": "Crom 29*                        ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--dglacet_imbryilelestrar",
+        "name": "40",
+        "pc_id": "dglacetImbryil Elestrar         ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--dglacet_imbryilelestrar",
+        "name": "41",
+        "pc_id": "dglacetImbryil Elestrar         ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--dglacet_imbryilelestrar",
+        "name": "42",
+        "pc_id": "dglacetImbryil Elestrar         ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--fr3eze_demethor",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "fr3ezeDemethor                  ",
+        "type": "location",
+        "value": {
+            "area": 21660,
+            "facing": -119.86148071289062,
+            "position": [
+                116.03470611572266,
+                116.03470611572266,
+                116.03470611572266
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--iteide_iteidedo'urden",
+        "name": "40",
+        "pc_id": "iteideIteide Do'Urden           ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--iteide_iteidedo'urden",
+        "name": "41",
+        "pc_id": "iteideIteide Do'Urden           ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--iteide_iteidedo'urden",
+        "name": "42",
+        "pc_id": "iteideIteide Do'Urden           ",
+        "type": "string",
+        "value": "yesmin"
+    },
+    {
+        "campaign_name": "pctools--iteide_iteidedo'urden",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "iteideIteide Do'Urden           ",
+        "type": "string",
+        "value": " "
+    },
+    {
+        "campaign_name": "pctools--jbaug_andertwenes",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "jbaugAndert Wenes               ",
+        "type": "location",
+        "value": {
+            "area": 22362,
+            "facing": 75.980880737304688,
+            "position": [
+                20.85127067565918,
+                20.85127067565918,
+                20.85127067565918
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--josef_gradouble",
+        "name": "40",
+        "pc_id": "JosefGradouble                  ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--josef_gradouble",
+        "name": "41",
+        "pc_id": "JosefGradouble                  ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--josef_gradouble",
+        "name": "42",
+        "pc_id": "JosefGradouble                  ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--kalladan_elrik",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "kalladanElrik                   ",
+        "type": "location",
+        "value": {
+            "area": 14209,
+            "facing": -83.751663208007813,
+            "position": [
+                192.43389892578125,
+                192.43389892578125,
+                192.43389892578125
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--krogoth59_laurawebber",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "krogoth59Laura Webber           ",
+        "type": "string",
+        "value": "test"
+    },
+    {
+        "campaign_name": "pctools--krogoth59_laurawebber",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_VOLUME",
+        "pc_id": "krogoth59Laura Webber           ",
+        "type": "int",
+        "value": 1
+    },
+    {
+        "campaign_name": "pctools--krogoth59_laurawebber",
+        "name": "40",
+        "pc_id": "krogoth59Laura Webber           ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--krogoth59_laurawebber",
+        "name": "41",
+        "pc_id": "krogoth59Laura Webber           ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--krogoth59_laurawebber",
+        "name": "42",
+        "pc_id": "krogoth59Laura Webber           ",
+        "type": "string",
+        "value": "yesmin"
+    },
+    {
+        "campaign_name": "pctools--lacompagniesansnom_tomwayne",
+        "name": "40",
+        "pc_id": "La Compagnie sanTom Wayne       ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--lacompagniesansnom_tomwayne",
+        "name": "41",
+        "pc_id": "La Compagnie sanTom Wayne       ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--lacompagniesansnom_tomwayne",
+        "name": "42",
+        "pc_id": "La Compagnie sanTom Wayne       ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--lacompagniesansnom_tomwayne",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_VOLUME",
+        "pc_id": "La Compagnie sanTom Wayne       ",
+        "type": "int",
+        "value": 0
+    },
+    {
+        "campaign_name": "pctools--lacompagniesansnom_tomwayne",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "La Compagnie sanTom Wayne       ",
+        "type": "string",
+        "value": "*joue un air entraînant* "
+    },
+    {
+        "campaign_name": "pctools--lacompagniesansnom_tomwayne",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_LABEL",
+        "pc_id": "La Compagnie sanTom Wayne       ",
+        "type": "string",
+        "value": "Barde"
+    },
+    {
+        "campaign_name": "pctools--lulu1611_groelnardpierretonnerre",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "lulu1611Groelnard Pierre        ",
+        "type": "location",
+        "value": {
+            "area": 12537,
+            "facing": 46.552898406982422,
+            "position": [
+                103.7410888671875,
+                103.7410888671875,
+                103.7410888671875
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--lusurf_osamodas",
+        "name": "40",
+        "pc_id": "LusurfOsamodas                  ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--lusurf_osamodas",
+        "name": "41",
+        "pc_id": "LusurfOsamodas                  ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--lusurf_osamodas",
+        "name": "42",
+        "pc_id": "LusurfOsamodas                  ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--malpeine_alfanmalpeine",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "MalpeineAlfan Malpeine          ",
+        "type": "location",
+        "value": {
+            "area": 7642,
+            "facing": -133.56343078613281,
+            "position": [
+                103.83483123779297,
+                103.83483123779297,
+                103.83483123779297
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "Vien là ma ptite succube"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_LABEL",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "Succube"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "40",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "41",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "42",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_02_LABEL",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "Par Loviatar"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_02",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "Loviatar attend ton ame avec impatience"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_03_LABEL",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "sourir"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_03",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "*sourir sadique* "
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_04",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "*affiche un bonheur intense au moment de donner la mort* "
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_04_LABEL",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "tue"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_05",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "Nrungnorog ! Fait moi un beau massacre.. *montre les dents* "
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_05_LABEL",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "Nrungnorog"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_06",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": " Ma douce Hezebel..."
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_croup",
+        "name": "PC_TOOLS_MACRO_BUTTON_06_LABEL",
+        "pc_id": "MrVandermareCroup               ",
+        "type": "string",
+        "value": "Hezebel"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "40",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "41",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "42",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_LABEL",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "Beuharg"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "BEEEUHAAAAAAAAAAAARGG !!!"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_02_LABEL",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "blessé"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_02",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "moi très mal ... "
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_03_LABEL",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "Bjour"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_03",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": " Bjour !"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_04_LABEL",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "massacre"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_04",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": " *tranche dans le tas comme un forcené*"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_09_LABEL",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "oups"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_09",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": " ARF PARDON TOI"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_08",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "*monté de niveau*"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_08_LABEL",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "chaussette !"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_05_LABEL",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "Gnarh"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_kwork",
+        "name": "PC_TOOLS_MACRO_BUTTON_05",
+        "pc_id": "MrVandermareKwork               ",
+        "type": "string",
+        "value": "GNNAAAAAAAAAAAARH !!!"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_lucyenledeyvot",
+        "name": "40",
+        "pc_id": "MrVandermareLucyen Le Deyvot    ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_lucyenledeyvot",
+        "name": "41",
+        "pc_id": "MrVandermareLucyen Le Deyvot    ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_lucyenledeyvot",
+        "name": "42",
+        "pc_id": "MrVandermareLucyen Le Deyvot    ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_lucyenledeyvot",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_LABEL",
+        "pc_id": "MrVandermareLucyen Le Deyvot    ",
+        "type": "string",
+        "value": "Par Ilmater"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_lucyenledeyvot",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "MrVandermareLucyen Le Deyvot    ",
+        "type": "string",
+        "value": "Que Ilmater vous pardonne"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_lucyenledeyvot",
+        "name": "PC_TOOLS_MACRO_BUTTON_02_LABEL",
+        "pc_id": "MrVandermareLucyen Le Deyvot    ",
+        "type": "string",
+        "value": "Vos douleurs"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_lucyenledeyvot",
+        "name": "PC_TOOLS_MACRO_BUTTON_02",
+        "pc_id": "MrVandermareLucyen Le Deyvot    ",
+        "type": "string",
+        "value": "Vos douleurs vont bientôt prendre fin !"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_ventdesmares",
+        "name": "40",
+        "pc_id": "MrVandermareVent Des Mares      ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_ventdesmares",
+        "name": "41",
+        "pc_id": "MrVandermareVent Des Mares      ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_ventdesmares",
+        "name": "42",
+        "pc_id": "MrVandermareVent Des Mares      ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_ventdesmares",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_LABEL",
+        "pc_id": "MrVandermareVent Des Mares      ",
+        "type": "string",
+        "value": "Par Sseth"
+    },
+    {
+        "campaign_name": "pctools--mrvandermare_ventdesmares",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "MrVandermareVent Des Mares      ",
+        "type": "string",
+        "value": "Sseth dévorera ton ame !"
+    },
+    {
+        "campaign_name": "pctools--namehoo_janellealendys",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "NamehooJanelle Alendys          ",
+        "type": "location",
+        "value": {
+            "area": 33239,
+            "facing": -93.157783508300781,
+            "position": [
+                92.376914978027344,
+                92.376914978027344,
+                92.376914978027344
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--namehoo_tydanobelzaln",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "NamehooTydano Belzalün         ",
+        "type": "location",
+        "value": {
+            "area": 15594,
+            "facing": -66.126686096191406,
+            "position": [
+                105.77443695068359,
+                105.77443695068359,
+                105.77443695068359
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--paulochon_noctos",
+        "name": "40",
+        "pc_id": "PaulochonNoctos                 ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--paulochon_noctos",
+        "name": "41",
+        "pc_id": "PaulochonNoctos                 ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--paulochon_noctos",
+        "name": "42",
+        "pc_id": "PaulochonNoctos                 ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--poudreauxyeux_atanator",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "poudreauxyeuxAtanator           ",
+        "type": "location",
+        "value": {
+            "area": 6635,
+            "facing": 59.119514465332031,
+            "position": [
+                31.032491683959961,
+                31.032491683959961,
+                31.032491683959961
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--poudreauxyeux_batangulchuk",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "poudreauxyeuxBatang Ulchuk      ",
+        "type": "location",
+        "value": {
+            "area": 37946,
+            "facing": -77.029800415039063,
+            "position": [
+                217.88554382324219,
+                217.88554382324219,
+                217.88554382324219
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--rem57_drosera",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "rem57Dro Sera                   ",
+        "type": "location",
+        "value": {
+            "area": 24521,
+            "facing": -74.091148376464844,
+            "position": [
+                290.383544921875,
+                290.383544921875,
+                290.383544921875
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--scoren_eowomirgelin",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "ScorenEowomir Gelin             ",
+        "type": "location",
+        "value": {
+            "area": 4608,
+            "facing": 84.149497985839844,
+            "position": [
+                167.38752746582031,
+                167.38752746582031,
+                167.38752746582031
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--sombretoile_ackerledfenseur",
+        "name": "40",
+        "pc_id": "Sombretoileacker Le Défens     ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--sombretoile_ackerledfenseur",
+        "name": "41",
+        "pc_id": "Sombretoileacker Le Défens     ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--sombretoile_ackerledfenseur",
+        "name": "42",
+        "pc_id": "Sombretoileacker Le Défens     ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--ssym_adrammelech--legrandcourroux",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymAdrammelech--le             ",
+        "type": "location",
+        "value": {
+            "area": 8700,
+            "facing": 178.57676696777344,
+            "position": [
+                53.120937347412109,
+                53.120937347412109,
+                53.120937347412109
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_faroredefirone",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymFarore de Firone            ",
+        "type": "location",
+        "value": {
+            "area": 15594,
+            "facing": -53.478977203369141,
+            "position": [
+                105.845947265625,
+                105.845947265625,
+                105.845947265625
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_jean-lucasdeneptune",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymJean-Lucas de Ne            ",
+        "type": "location",
+        "value": {
+            "area": 28703,
+            "facing": -0.77868616580963135,
+            "position": [
+                38.301261901855469,
+                38.301261901855469,
+                38.301261901855469
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_jean-lucaslesorcier",
+        "name": "40",
+        "pc_id": "SsymJean-Lucas Le So            ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--ssym_jean-lucaslesorcier",
+        "name": "41",
+        "pc_id": "SsymJean-Lucas Le So            ",
+        "type": "string",
+        "value": "notm"
+    },
+    {
+        "campaign_name": "pctools--ssym_jean-lucaslesorcier",
+        "name": "42",
+        "pc_id": "SsymJean-Lucas Le So            ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--ssym_jean-lucaslesorcier",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymJean-Lucas Le So            ",
+        "type": "location",
+        "value": {
+            "area": 24181,
+            "facing": 150.04376220703125,
+            "position": [
+                172.69905090332031,
+                172.69905090332031,
+                172.69905090332031
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_jean-lucaslevengeur",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymJean-Lucas Le Ve            ",
+        "type": "location",
+        "value": {
+            "area": 20230,
+            "facing": 25.089866638183594,
+            "position": [
+                125.53203582763672,
+                125.53203582763672,
+                125.53203582763672
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Punition Divine !"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Acide"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_02_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Feu"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_02",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Colonne Divine !"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_03_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Froid"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_03",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Souffle Divin !"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "40",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "41",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "42",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_04_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Foudre"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_04",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Châtiment Divin ! "
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_05_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Rune of Vitr"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_05",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Artefact. Punition Céleste ! "
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_06_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Rune of Fire"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_06",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante* Magie Perdue : Artefact. Colonne Céleste ! "
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_07_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Rune of Ice"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_07",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Artefact. Courroux Céleste ! "
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_08_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Rune of Stor"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_08",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Artefact. Châtiment Céleste ! "
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_09_LABEL",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "Arret du Tem"
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_09_VOLUME",
+        "pc_id": "SsymMage Antique                ",
+        "type": "int",
+        "value": 0
+    },
+    {
+        "campaign_name": "pctools--ssym_mageantique",
+        "name": "PC_TOOLS_MACRO_BUTTON_09",
+        "pc_id": "SsymMage Antique                ",
+        "type": "string",
+        "value": "<i>*incante*<\/i> Magie Perdue : Artefact Suprême. Renouveau : Terre Paradisiaque !"
+    },
+    {
+        "campaign_name": "pctools--ssym_mineraldesolum",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymMineral de Solum            ",
+        "type": "location",
+        "value": {
+            "area": 31316,
+            "facing": -147.45745849609375,
+            "position": [
+                86.402297973632813,
+                86.402297973632813,
+                86.402297973632813
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_ondinnedeverius",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymOndinne de Veriu            ",
+        "type": "location",
+        "value": {
+            "area": 27936,
+            "facing": 167.30113220214844,
+            "position": [
+                49.220054626464844,
+                49.220054626464844,
+                49.220054626464844
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_sophielaprtresse",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymSophie La Prêtr            ",
+        "type": "location",
+        "value": {
+            "area": 31369,
+            "facing": 157.30923461914063,
+            "position": [
+                265.04873657226562,
+                265.04873657226562,
+                265.04873657226562
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_ssymletraqueur",
+        "name": "40",
+        "pc_id": "SsymSsym le Traqueur            ",
+        "type": "string",
+        "value": "no"
+    },
+    {
+        "campaign_name": "pctools--ssym_ssymletraqueur",
+        "name": "41",
+        "pc_id": "SsymSsym le Traqueur            ",
+        "type": "string",
+        "value": "yestm"
+    },
+    {
+        "campaign_name": "pctools--ssym_ssymletraqueur",
+        "name": "42",
+        "pc_id": "SsymSsym le Traqueur            ",
+        "type": "string",
+        "value": "nomin"
+    },
+    {
+        "campaign_name": "pctools--ssym_ssymletraqueur",
+        "name": "PC_TOOLS_MACRO_BUTTON_01_LABEL",
+        "pc_id": "SsymSsym le Traqueur            ",
+        "type": "string",
+        "value": "Combat"
+    },
+    {
+        "campaign_name": "pctools--ssym_ssymletraqueur",
+        "name": "PC_TOOLS_MACRO_BUTTON_01",
+        "pc_id": "SsymSsym le Traqueur            ",
+        "type": "string",
+        "value": "A mort !"
+    },
+    {
+        "campaign_name": "pctools--ssym_ssymletraqueur",
+        "name": "PC_TOOLS_MACRO_BUTTON_02_LABEL",
+        "pc_id": "SsymSsym le Traqueur            ",
+        "type": "string",
+        "value": "Chemin"
+    },
+    {
+        "campaign_name": "pctools--ssym_ssymletraqueur",
+        "name": "PC_TOOLS_MACRO_BUTTON_02",
+        "pc_id": "SsymSsym le Traqueur            ",
+        "type": "string",
+        "value": "D'autres sont venus nous barrer le chemin ! "
+    },
+    {
+        "campaign_name": "pctools--ssym_sylphes",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymSylphes                     ",
+        "type": "location",
+        "value": {
+            "area": 37946,
+            "facing": -134.62730407714844,
+            "position": [
+                200.90187072753906,
+                200.90187072753906,
+                200.90187072753906
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--ssym_yvelynemyrage",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "SsymYvelyne Myrage              ",
+        "type": "location",
+        "value": {
+            "area": 16717,
+            "facing": -144.82525634765625,
+            "position": [
+                70.036087036132813,
+                70.036087036132813,
+                70.036087036132813
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--tyrionnunzi_archaon",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "TyrionnunziArchaon              ",
+        "type": "location",
+        "value": {
+            "area": 2716,
+            "facing": 114.27381134033203,
+            "position": [
+                13.357608795166016,
+                13.357608795166016,
+                13.357608795166016
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--tyrionnunzi_grabuckcognedur",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "TyrionnunziGrabuck Cognedur     ",
+        "type": "location",
+        "value": {
+            "area": 27588,
+            "facing": 45.656810760498047,
+            "position": [
+                107.11652374267578,
+                107.11652374267578,
+                107.11652374267578
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--tyrionnunzi_richardcypher",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "TyrionnunziRichard Cypher       ",
+        "type": "location",
+        "value": {
+            "area": 31316,
+            "facing": 25.317256927490234,
+            "position": [
+                109.05960083007812,
+                109.05960083007812,
+                109.05960083007812
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--tyrionnunzi_sirgaalad",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "TyrionnunziSir Gaalad           ",
+        "type": "location",
+        "value": {
+            "area": 4850,
+            "facing": 35.916271209716797,
+            "position": [
+                168.25149536132812,
+                168.25149536132812,
+                168.25149536132812
+            ]
+        }
+    },
+    {
+        "campaign_name": "pctools--tyrionnunzi_tyriondivineflury",
+        "name": "HSS_PCTOOLS_PC_LOCATION",
+        "pc_id": "TyrionnunziTyrion Divineflu     ",
+        "type": "location",
+        "value": {
+            "area": 10346,
+            "facing": -144.36091613769531,
+            "position": [
+                104.47699737548828,
+                104.47699737548828,
+                104.47699737548828
+            ]
+        }
+    }
+]

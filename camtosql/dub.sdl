@@ -1,0 +1,23 @@
+name "nwn2-camtosql"
+description "Migrate NWN2 campaign database (foxpro) to a MySQL database"
+authors "Thibaut CHARLES"
+copyright "Copyright © 2020, Thibaut CHARLES"
+license "GPL-3.0"
+
+dependency "nwn-lib-d" version="==0.0.7"
+dependency "colorize" version="~>1.0.5"
+dependency "mysql-native" version="~>3.0.0"
+
+excludedSourceFiles "source/upgrade_scripts.d"
+
+subPackage {
+	name "upgrade-scripts"
+	targetType "executable"
+	targetName "nwn2-camtosql-upgrade-scripts"
+
+	mainSourceFile "source/upgrade_scripts.d"
+	excludedSourceFiles "source/app.d"
+	stringImportPaths "res/"
+
+	dependency "colorize" version="~>1.0.5"
+}
