@@ -180,7 +180,10 @@ jobs:
           tag_name: ${{ steps.rel_info.outputs.tag }}
           release_name: ${{ steps.rel_info.outputs.tag }}
           prerelease: ${{ steps.rel_info.outputs.prerelease }}
-          body: "Automated release with GitHub Actions"
+          body: |
+            Automated release with GitHub Actions
+
+            > The windows-i686 package does not provide the nwn2-stagingtool executable.
 
   release:
     name: Release if tagged

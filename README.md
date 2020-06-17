@@ -5,7 +5,8 @@ any inconsistency.
 
 # Download
 
-Latest version of the tools can be downloaded here: https://github.com/CromFr/nwn2-tools/releases
+Latest version of the tools can be downloaded here:
+https://github.com/CromFr/nwn2-tools/releases
 
 # Tools
 
@@ -14,7 +15,7 @@ Latest version of the tools can be downloaded here: https://github.com/CromFr/nw
 Generate or update `moduledownloaderresources.xml` and quickly compress client
 files (ie `.lzma`), with content taken from a set of directories.
 
-View its [README.md](camtosql/README.md) for more information
+View its [README.md](stagingtool/README.md) for more information
 
 ### [nwn2-moduleinstaller](moduleinstaller/)
 

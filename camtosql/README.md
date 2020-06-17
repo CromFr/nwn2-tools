@@ -17,7 +17,7 @@ is also handy to write a script for the migration, like a `.bat` or a `.sh`
 file that can be executed by double clicking it on Windows (make sure you have
 git bash if you want to execute `.sh` files).
 
-##### nwn2-camtosql
+#### nwn2-camtosql
 This tool will parse all player characters in the provided vault (with the
 `--vault` argument) to generate a list of PC identifier in the same format as
 stored in the campaign database (account name + character name, truncated to
@@ -33,7 +33,7 @@ format.
 
 The tool does not modify the FoxPro campaign database files in any way.
 
-##### nwn2-camtosql-upgrade-scripts
+#### nwn2-camtosql-upgrade-scripts
 This tool generates the correct NWScript include file to replace Bioware's
 campaign functions with similar functions sending the data to MySQL, and
 changes your module scripts to use the new campaign functions (adds a
