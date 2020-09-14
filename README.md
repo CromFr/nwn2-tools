@@ -38,3 +38,10 @@ Migrate the NWN2 campaign database to MySQL, and replace campaign NWScript
 function usage in your scripts.
 
 View its [README.md](camtosql/README.md) for more information
+
+
+### [nwn2-adjust-item-prices](adjust-item-prices/)
+
+Set the items additional cost values in order to require a specific level.
+
+View its [README.md](adjust-item-prices/README.md) for more information

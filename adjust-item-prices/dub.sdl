@@ -5,5 +5,5 @@ copyright "Copyright © 2020, Crom"
 license "GPLv3"
 dependency "nwn-lib-d" version="~>0.0.7"
 
-sourcePaths "source" "../source"
+sourcePaths "source"
 stringImportPaths "res"
