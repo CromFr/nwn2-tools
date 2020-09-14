@@ -134,8 +134,6 @@ jobs:
 
           cd adjust-item-prices
           dub build --arch=${{ matrix.arch }}-${{ matrix.platform }} -b release
-          dub build --arch=${{ matrix.arch }}-${{ matrix.platform }} -b release :upgrade-scripts
-
           mv nwn2-adjust-item-prices$BIN_SUFFIX ../bin/
 
       - name: Upload artifacts
