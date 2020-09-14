@@ -1,0 +1,9 @@
+name "nwn2-adjust-item-prices"
+description "Set additional cost to reach a certain gold value"
+authors "Crom"
+copyright "Copyright © 2020, Crom"
+license "GPLv3"
+dependency "nwn-lib-d" version="~>0.0.7"
+
+sourcePaths "source" "../source"
+stringImportPaths "res"

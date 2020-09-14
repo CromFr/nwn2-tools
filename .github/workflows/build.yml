@@ -127,6 +127,17 @@ jobs:
 
           mv nwn2-camtosql$BIN_SUFFIX nwn2-camtosql-upgrade-scripts$BIN_SUFFIX ../bin/
 
+      - name: Build nwn2-adjust-item-prices
+        run: |
+          source ~/dlang/activate
+          [[ "${{ matrix.platform }}" == windows-* ]] && BIN_SUFFIX=".exe" || BIN_SUFFIX=""
+
+          cd adjust-item-prices
+          dub build --arch=${{ matrix.arch }}-${{ matrix.platform }} -b release
+          dub build --arch=${{ matrix.arch }}-${{ matrix.platform }} -b release :upgrade-scripts
+
+          mv nwn2-adjust-item-prices$BIN_SUFFIX ../bin/
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:

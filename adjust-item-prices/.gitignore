@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/nwn2-adjust-item-prices
+nwn2-adjust-item-prices.so
+nwn2-adjust-item-prices.dylib
+nwn2-adjust-item-prices.dll
+nwn2-adjust-item-prices.a
+nwn2-adjust-item-prices.lib
+nwn2-adjust-item-prices-test-*
+*.exe
+*.o
+*.obj
+*.lst
