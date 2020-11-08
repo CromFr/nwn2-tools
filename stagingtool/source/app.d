@@ -190,7 +190,7 @@ int main(string[] args)
 	if(threads > 0)
 		defaultPoolThreads = threads;
 
-	Resource[] resources;
+	__gshared Resource[] resources;
 	resources.length = resourceFiles.length;
 	foreach(i, resDirEntry ; resourceFiles.parallel){
 		const resName = resDirEntry.baseName.toLower;
