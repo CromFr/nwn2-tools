@@ -2,6 +2,6 @@
 	"fileVersion": 1,
 	"versions": {
 		"gfm": "7.0.8",
-		"nwn-lib-d": "0.0.7"
+		"nwn-lib-d": "1.0.0"
 	}
 }
