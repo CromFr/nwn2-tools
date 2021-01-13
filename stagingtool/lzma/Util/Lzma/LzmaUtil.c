@@ -249,10 +249,10 @@ int main2(int numArgs, const char *args[], char *rs)
 }
 
 
-int MY_CDECL main(int numArgs, const char *args[])
-{
-  char rs[800] = { 0 };
-  int res = main2(numArgs, args, rs);
-  fputs(rs, stdout);
-  return res;
-}
+// int MY_CDECL main(int numArgs, const char *args[])
+// {
+//   char rs[800] = { 0 };
+//   int res = main2(numArgs, args, rs);
+//   fputs(rs, stdout);
+//   return res;
+// }

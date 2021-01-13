@@ -190,7 +190,7 @@ int main(string[] args)
 	if(threads > 0)
 		defaultPoolThreads = threads;
 
-	Resource[] resources;
+	__gshared Resource[] resources;
 	resources.length = resourceFiles.length;
 	foreach(i, resDirEntry ; resourceFiles.parallel){
 		const resName = resDirEntry.baseName.toLower;
@@ -280,7 +280,7 @@ struct Resource{
 
 		{
 			auto file = File(resFile);
-			resHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString();
+			resHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString().idup;
 			resSize = file.size().to!size_t;
 		}
 
@@ -295,7 +295,7 @@ struct Resource{
 
 		{
 			auto file = File(dlFilePath);
-			dlHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString();
+			dlHash = digest!SHA1(file.byChunk(4096 * 1024)).toHexString().idup;
 			dlSize = file.size().to!size_t;
 		}
 	}

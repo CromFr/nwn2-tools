@@ -1,0 +1,9 @@
+name "nwn2-bictoutc"
+description "Convert a BIC char file to a UTC blueprint that can be placed with the toolset"
+license "GPL-3.0"
+copyright "Copyright © 2016, Thibaut CHARLES"
+authors "Thibaut CHARLES"
+
+dependency "nwn-lib-d" version="*"
+
+sourcePaths "source"

@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+nwn2-bictoutc.so
+nwn2-bictoutc.dylib
+nwn2-bictoutc.dll
+nwn2-bictoutc.a
+nwn2-bictoutc.lib
+nwn2-bictoutc-test-*
+*.exe
+*.o
+*.obj
+*.lst
+
+nwn2-bictoutc*
