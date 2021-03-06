@@ -136,6 +136,15 @@ jobs:
           dub build --arch=${{ matrix.arch }}-${{ matrix.platform }} -b release
           mv nwn2-adjust-item-prices$BIN_SUFFIX ../bin/
 
+      - name: Build nwn2-update-module-arealist
+        run: |
+          source ~/dlang/activate
+          [[ "${{ matrix.platform }}" == windows-* ]] && BIN_SUFFIX=".exe" || BIN_SUFFIX=""
+
+          cd update-module-arealist
+          dub build --arch=${{ matrix.arch }}-${{ matrix.platform }} -b release
+          mv nwn2-update-module-arealist$BIN_SUFFIX ../bin/
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:

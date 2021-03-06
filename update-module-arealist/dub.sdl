@@ -1,6 +1,6 @@
-name "update-module-arealist"
+name "nwn2-update-module-arealist"
 description "Update the area list stored in the module.ifo file"
 authors "Crom"
 copyright "Copyright © 2021, Crom"
 license "GPLv3"
-dependency "nwn-lib-d" version="~>1.0.0"
+dependency "nwn-lib-d" version="~>1.0.2"
