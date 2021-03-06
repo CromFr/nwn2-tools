@@ -21,10 +21,10 @@ jobs:
 
           echo "========= Install latest LDC ========="
           wget -q https://dlang.org/install.sh -O /tmp/install.sh
-          bash /tmp/install.sh install ldc
+          bash /tmp/install.sh install ldc-1.24.0                                 # PIN LDC VERSION because of https://github.com/mysql-d/mysql-native/issues/224
 
           echo "========= Create LDC activation symlink ========="
-          ln -s "$(bash /tmp/install.sh install ldc -a)" ~/dlang/activate
+          ln -s "$(bash /tmp/install.sh install ldc-1.24.0 -a)" ~/dlang/activate  # PIN LDC VERSION because of https://github.com/mysql-d/mysql-native/issues/224
           source ~/dlang/activate
 
           echo "========= Install LDC windows libs for cross compiling ========="
