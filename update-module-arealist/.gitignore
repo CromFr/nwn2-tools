@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/update-module-arealist
+update-module-arealist.so
+update-module-arealist.dylib
+update-module-arealist.dll
+update-module-arealist.a
+update-module-arealist.lib
+update-module-arealist-test-*
+*.exe
+*.o
+*.obj
+*.lst

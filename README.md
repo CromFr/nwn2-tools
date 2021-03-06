@@ -15,14 +15,14 @@ https://github.com/CromFr/nwn2-tools/releases
 Generate or update `moduledownloaderresources.xml` and quickly compress client
 files (ie `.lzma`), with content taken from a set of directories.
 
-View its [README.md](stagingtool/README.md) for more information
+Take a loot at its [README.md](stagingtool/README.md) for more information
 
 ### [nwn2-moduleinstaller](moduleinstaller/)
 
 Strip & install module files to appropriate directories very quickly (by
 overwriting only modified files). Your module need to be versioned with git.
 
-View its [README.md](moduleinstaller/README.md) for more information
+Take a loot at its [README.md](moduleinstaller/README.md) for more information
 
 ### [nwn2-itemupdater](itemupdater/)
 
@@ -30,18 +30,25 @@ Update all instances of an item (or many) contained in character files and in
 the MySQL database, to the current item blueprint version as configured in
 your module. The tool is able to keep or override local variables.
 
-View its [README.md](itemupdater/README.md) for more information
+Take a loot at its [README.md](itemupdater/README.md) for more information
 
 ### [nwn2-camtosql](camtosql/)
 
 Migrate the NWN2 campaign database to MySQL, and replace campaign NWScript
 function usage in your scripts.
 
-View its [README.md](camtosql/README.md) for more information
+Take a loot at its [README.md](camtosql/README.md) for more information
 
 
 ### [nwn2-adjust-item-prices](adjust-item-prices/)
 
 Set the items additional cost values in order to require a specific level.
 
-View its [README.md](adjust-item-prices/README.md) for more information
+Take a loot at its [README.md](adjust-item-prices/README.md) for more information
+
+
+### [nwn2-update-module-arealist](update-module-arealist/)
+
+Updates the module area list stored inside the module.ifo file.
+
+Take a loot at its [README.md](adjust-item-prices/README.md) for more information
