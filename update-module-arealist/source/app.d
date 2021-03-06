@@ -34,27 +34,10 @@ void main(string[] args)
 			resrefList ~= file.baseName.stripExtension.toLower;
 		}
 	}
-
-	writefln("%s areas found: %s", resrefList.length, resrefList);
-	stdout.flush();
-
 	resrefList.sort;
+	writefln("%s areas found: %s", resrefList.length, resrefList);
 
-	ifo["Mod_Area_list"].get!GffList.length = 0;
-	foreach(resref ; resrefList){
-		//"Area_Name": GffValue(GffResRef(resref))
-		auto val = GffValue(GffType.ResRef);
-		val.get!GffResRef = resref;
-		//ifo["Mod_Area_list"].get!GffList ~= GffStruct(cast(GffValue[string])null, 6);
-		ifo["Mod_Area_list"].get!GffList ~= GffStruct(["Area_Name": val], 6);
-	}
+	ifo["Mod_Area_list"] = GffList(resrefList.map!(a => GffStruct(["Area_Name": GffValue(GffResRef(a))], 6)).array);
 
-	//ifo["Mod_Area_list"] = GffList(resrefList.map!(a => GffStruct(["Area_Name": GffValue(GffResRef(a))], 6)).array);
-
-	stderr.writefln(ifo.toPrettyString());
-	stderr.flush();
-
-	std.file.write(ifoFile~".2.utc", ifo.serialize());
-	writefln("written");
-	stdout.flush();
+	std.file.write(ifoFile, ifo.serialize());
 }
