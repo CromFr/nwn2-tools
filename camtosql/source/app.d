@@ -160,7 +160,19 @@ int main(string[] args){
 			auto lname = c["LastName"].to!string;
 			auto charName = fname ~ (lname.length > 0 ? " " : "") ~ lname;
 
-			knownIDs[PCID(accName, charName)] = FullID(accName, charName);
+			auto pcid = PCID(accName, charName);
+			auto fullid = FullID(accName, charName);
+			if(auto f = pcid in knownIDs){
+				if(*f != fullid){
+					stderr.cwrite(
+						format!"Warning: Owner ID '%s' is already taken by '%s/%s'. '%s/%s' will take the ownership of the campaign variables"(
+							pcid, f.account, f.charname, fullid.account, fullid.charname,
+						).color(fg.yellow), "\n"
+					);
+				}
+			}
+			knownIDs[pcid] = fullid;
+
 
 			// insert character
 			foreach(ref stmt ; registerPCStmt)
