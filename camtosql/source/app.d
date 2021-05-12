@@ -153,7 +153,11 @@ int main(string[] args){
 	bench.start;
 	foreach(charFile ; vaultPath.dirEntries(SpanMode.depth)){
 		if(charFile.extension.toLower == ".bic"){
-			auto accName = charFile.dirName.baseName;
+			auto accName = charFile
+				.absolutePath
+				.relativePath(vaultPath.absolutePath)
+				.pathSplitter()
+				.front();
 
 			auto c = new FastGff(charFile);
 			auto fname = c["FirstName"].to!string;
