@@ -6,7 +6,7 @@ import std.path;
 import std.file;
 import std.file: readFile = read, writeFile = write;
 import std.exception;
-import std.xml;
+import undead.xml;
 import std.algorithm;
 import std.parallelism;
 import std.typecons;
@@ -70,7 +70,7 @@ int main(string[] args)
 	string listFilePath;
 
 	auto res = getopt(args, config.passThrough,
-		"o|xml-out", "Path to moduledownloaderresources.xml. If existing, will read it to only generate modified client files. '-' to print to stdout.", &xmlPath,
+		"o|xml-out", "Path to moduledownloaderresources.xml. If existing, it will update its content. '-' to print to stdout.", &xmlPath,
 		"f|force", "Generate all client files even if they have not been modified", &force,
 		"extensions", "Set the default file extensions to add to the client files list. Default: [trx, hak, bmu, tlk]", &extensions,
 		"since", "Only check files modified after a given date. Other files will still be listed, but no modification will be detected."
@@ -131,6 +131,7 @@ int main(string[] args)
 	foreach(ref path ; resPaths){
 		auto serversFile = buildPathCI(path, "servers.xml");
 		if(serversFile.exists && serversFile.isFile){
+			logDebug("Found servers list:", serversFile);
 			auto parser = new DocumentParser(serversFile.readText);
 			parser.onStartTag["server"] = (ElementParser xml){
 				serversList ~= xml.tag.attr["id"].to!int;
@@ -147,6 +148,8 @@ int main(string[] args)
 	//Load existing xml resources
 	Resource[string] previousResources;
 	if(xmlPath != "-" && xmlPath.exists){
+		info("The output file already exists, it will be updated");
+
 		auto parser = new DocumentParser(xmlPath.readText);
 		if(incremental && "gen-date" in parser.tag.attr){
 			try{
@@ -228,9 +231,10 @@ int main(string[] args)
 	foreach(ref res ; previousResources){
 		warning("Removed file: ", res.name);
 		const lzma = buildPathCI(outPath, res.name ~ ".lzma");
-		if(lzma.exists)
+		if(lzma.exists){
 			logDebug("Delete file: ", lzma);
 			lzma.remove();
+		}
 	}
 
 	//Sort resource list
@@ -270,11 +274,10 @@ struct Resource{
 	this(in DirEntry resFile, in string expectedResHash, in DirEntry outputDir, bool force){
 		name = resFile.baseName.toLower;
 		switch(name.extension.toLower){
-			case ".trx": type = ResType.DirectoryEntry; break;
 			case ".hak": type = ResType.Hak; break;
 			case ".bmu": type = ResType.Music; break;
 			case ".tlk": type = ResType.Tlk; break;
-			default: assert(0, "Unknown resource extension");
+			default:     type = ResType.DirectoryEntry; break;
 		}
 
 

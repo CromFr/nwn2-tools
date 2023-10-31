@@ -3,8 +3,7 @@ description "Stage and upload client files"
 authors "Thibaut CHARLES"
 copyright "Copyright © 2017, Thibaut CHARLES"
 license "GPL-3.0"
-
-dependency "nwn-lib-d" version="==0.0.7"
-
+dependency "nwn-lib-d" version=">=1.0.0"
+dependency "undead" version="~>1.1.8"
 sourceFiles "lzma.o" platform="posix"
 sourceFiles "lzma.obj" platform="windows"
