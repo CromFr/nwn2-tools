@@ -53,19 +53,19 @@ int main(string[] args)
 
 	if(rmEquip){
 		// Remove equipped items
-		gff["Equip_ItemList"].as!(GffType.List).length = 0;
+		gff["Equip_ItemList"].get!GffList.length = 0;
 	}
 	else{
 		//Set item list resrefs
-		foreach(ref item ; gff["Equip_ItemList"].as!(GffType.List)){
+		foreach(ref item ; gff["Equip_ItemList"].get!GffList){
 
-			auto newItem = GffNode(GffType.Struct);
-			newItem.structType = item.structType;
-			newItem["Repos_PosX"] = GffNode(GffType.Word, null, 0);
-			newItem["Repos_PosY"] = GffNode(GffType.Word, null, 0);
-			newItem["Pickpocketable"] = GffNode(GffType.Byte, null, 0);
-			newItem["Dropable"] = GffNode(GffType.Byte, null, 0);
-			newItem["EquippedRes"] = GffNode(GffType.ResRef, null, item["TemplateResRef"].to!string);
+			auto newItem = GffStruct();
+			newItem.id = item.id;
+			newItem["Repos_PosX"] = GffWord(0);
+			newItem["Repos_PosY"] = GffWord(0);
+			newItem["Pickpocketable"] = GffByte(0);
+			newItem["Dropable"] = GffByte(0);
+			newItem["EquippedRes"] = GffResRef(item["TemplateResRef"].to!string);
 
 			item = newItem;
 		}
@@ -73,30 +73,30 @@ int main(string[] args)
 
 	if(keepInv){
 		//Set item list resrefs
-		foreach(ref item ; gff["ItemList"].as!(GffType.List)){
+		foreach(ref item ; gff["ItemList"].get!GffList){
 
-			auto newItem = GffNode(GffType.Struct);
-			newItem.structType = item.structType;
-			newItem["Repos_PosX"] = GffNode(GffType.Word, null, 0);
-			newItem["Repos_PosY"] = GffNode(GffType.Word, null, 0);
-			newItem["Pickpocketable"] = GffNode(GffType.Byte, null, 0);
-			newItem["Dropable"] = GffNode(GffType.Byte, null, 0);
-			newItem["EquippedRes"] = GffNode(GffType.ResRef, null, item["TemplateResRef"].to!string);
+			auto newItem = GffStruct();
+			newItem.id = item.id;
+			newItem["Repos_PosX"] = GffWord(0);
+			newItem["Repos_PosY"] = GffWord(0);
+			newItem["Pickpocketable"] = GffByte(0);
+			newItem["Dropable"] = GffByte(0);
+			newItem["EquippedRes"] = GffResRef(item["TemplateResRef"].to!string);
 
 			item = newItem;
 		}
 	}
 	else{
 		//Remove inventory items
-		gff["ItemList"].as!(GffType.List).length = 0;
+		gff["ItemList"].get!GffList.length = 0;
 	}
 
 	//Set misc
-	gff["TemplateResRef"].as!(GffType.ResRef) = resref;
-	gff["Tag"].as!(GffType.ExoString) = resref;
-	gff["FactionID"].as!(GffType.Word) = factionId;
-	gff["Classification"] = GffNode(GffType.ExoString, null, classification);
-	gff["IsPC"].as!(GffType.Byte) = 0;
+	gff["TemplateResRef"].get!GffResRef = resref;
+	gff["Tag"].get!GffString = resref;
+	gff["FactionID"].get!GffWord = factionId;
+	gff["Classification"] = classification;
+	gff["IsPC"].get!GffByte = 0;
 
 	foreach(key ; [
 		"LvlStatList",
@@ -163,24 +163,24 @@ int main(string[] args)
 		"CreatnScrptFird",
 		]){
 		if(key in gff)
-			gff.as!(GffType.Struct).remove(key);
+			gff.root.remove(key);
 	}
 
 
 	//Set scripts
-	gff["ScriptAttacked"].as!(GffType.ResRef) = scriptsOverride.get("Attacked", "nw_c2_default5");
-	gff["ScriptDamaged"].as!(GffType.ResRef) = scriptsOverride.get("Damaged", "nw_c2_default6");
-	gff["ScriptDeath"].as!(GffType.ResRef) = scriptsOverride.get("Death", "nw_c2_default7");
-	gff["ScriptDialogue"].as!(GffType.ResRef) = scriptsOverride.get("Dialogue", "nw_c2_default4");
-	gff["ScriptDisturbed"].as!(GffType.ResRef) = scriptsOverride.get("Disturbed", "nw_c2_default8");
-	gff["ScriptEndRound"].as!(GffType.ResRef) = scriptsOverride.get("EndRound", "nw_c2_default3");
-	gff["ScriptHeartbeat"].as!(GffType.ResRef) = scriptsOverride.get("Heartbeat", "nw_c2_default1");
-	gff["ScriptOnBlocked"].as!(GffType.ResRef) = scriptsOverride.get("OnBlocked", "nw_c2_defaulte");
-	gff["ScriptOnNotice"].as!(GffType.ResRef) = scriptsOverride.get("OnNotice", "nw_c2_default2");
-	gff["ScriptRested"].as!(GffType.ResRef) = scriptsOverride.get("Rested", "nw_c2_defaulta");
-	gff["ScriptSpawn"].as!(GffType.ResRef) = scriptsOverride.get("Spawn", "nw_c2_default9");
-	gff["ScriptSpellAt"].as!(GffType.ResRef) = scriptsOverride.get("SpellAt", "nw_c2_defaultb");
-	gff["ScriptUserDefine"].as!(GffType.ResRef) = scriptsOverride.get("UserDefine", "nw_c2_defaultd");
+	gff["ScriptAttacked"].get!GffResRef = scriptsOverride.get("Attacked", "nw_c2_default5");
+	gff["ScriptDamaged"].get!GffResRef = scriptsOverride.get("Damaged", "nw_c2_default6");
+	gff["ScriptDeath"].get!GffResRef = scriptsOverride.get("Death", "nw_c2_default7");
+	gff["ScriptDialogue"].get!GffResRef = scriptsOverride.get("Dialogue", "nw_c2_default4");
+	gff["ScriptDisturbed"].get!GffResRef = scriptsOverride.get("Disturbed", "nw_c2_default8");
+	gff["ScriptEndRound"].get!GffResRef = scriptsOverride.get("EndRound", "nw_c2_default3");
+	gff["ScriptHeartbeat"].get!GffResRef = scriptsOverride.get("Heartbeat", "nw_c2_default1");
+	gff["ScriptOnBlocked"].get!GffResRef = scriptsOverride.get("OnBlocked", "nw_c2_defaulte");
+	gff["ScriptOnNotice"].get!GffResRef = scriptsOverride.get("OnNotice", "nw_c2_default2");
+	gff["ScriptRested"].get!GffResRef = scriptsOverride.get("Rested", "nw_c2_defaulta");
+	gff["ScriptSpawn"].get!GffResRef = scriptsOverride.get("Spawn", "nw_c2_default9");
+	gff["ScriptSpellAt"].get!GffResRef = scriptsOverride.get("SpellAt", "nw_c2_defaultb");
+	gff["ScriptUserDefine"].get!GffResRef = scriptsOverride.get("UserDefine", "nw_c2_defaultd");
 
 
 

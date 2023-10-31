@@ -2,15 +2,17 @@
 	"fileVersion": 1,
 	"versions": {
 		"colorize": "1.0.5",
-		"eventcore": "0.9.13",
-		"gfm": "7.0.8",
+		"eventcore": "0.9.26",
+		"gfm": "8.0.6",
+		"intel-intrinsics": "1.11.15",
 		"libasync": "0.8.6",
-		"memutils": "1.0.4",
-		"mysql-native": "3.0.1",
-		"nwn-lib-d": "0.0.7",
+		"memutils": "1.0.9",
+		"mysql-native": "3.0.3",
+		"nwn-lib-d": "1.1.0",
 		"stdx-allocator": "2.77.5",
-		"taggedalgebraic": "0.11.21",
+		"taggedalgebraic": "0.11.22",
 		"unit-threaded": "0.7.55",
-		"vibe-core": "1.16.0"
+		"vibe-container": "1.0.0",
+		"vibe-core": "2.4.0"
 	}
 }

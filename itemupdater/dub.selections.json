@@ -1,18 +1,20 @@
 {
 	"fileVersion": 1,
 	"versions": {
-		"eventcore": "0.9.13",
-		"gfm": "7.0.8",
+		"eventcore": "0.9.26",
+		"gfm": "8.0.6",
 		"gl3n": "1.3.1",
+		"intel-intrinsics": "1.11.15",
 		"libasync": "0.8.6",
 		"libevent": "2.0.2+2.0.16",
-		"memutils": "1.0.4",
-		"mysql-native": "3.0.0",
-		"nwn-lib-d": "0.0.7",
+		"memutils": "1.0.9",
+		"mysql-native": "3.0.3",
+		"nwn-lib-d": "1.1.0",
 		"stdx-allocator": "2.77.5",
-		"taggedalgebraic": "0.11.19",
+		"taggedalgebraic": "0.11.22",
 		"unit-threaded": "0.7.55",
-		"vibe-core": "1.13.0",
+		"vibe-container": "1.0.0",
+		"vibe-core": "2.4.0",
 		"vibe-d": "0.8.4"
 	}
 }

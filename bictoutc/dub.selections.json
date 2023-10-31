@@ -1,7 +1,8 @@
 {
 	"fileVersion": 1,
 	"versions": {
-		"gfm": "7.0.8",
-		"nwn-lib-d": "0.0.4+commit.38.g5f823f2"
+		"gfm": "8.0.6",
+		"intel-intrinsics": "1.11.15",
+		"nwn-lib-d": "1.1.0"
 	}
 }

@@ -82,7 +82,7 @@ int main(string[] args){
 		enforce((sqlTablePrefix is null) ^ (sqlSingleTable is null), "You cannot use both --sql-table-prefix and --sql-table-name");
 
 		camFiles = args[1 .. $];
-		camFiles.each!(a => {
+		camFiles.each!((a) {
 			enforce(a.extension.toLower == ".dbf", "File " ~ a ~ " is not a .dbf file");
 			enforce(a.exists, "File " ~ a ~ " does not exist");
 		});

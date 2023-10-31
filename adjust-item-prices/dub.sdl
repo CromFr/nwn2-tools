@@ -3,7 +3,7 @@ description "Set additional cost to reach a certain gold value"
 authors "Crom"
 copyright "Copyright © 2020, Crom"
 license "GPLv3"
-dependency "nwn-lib-d" version="~>1.0.0"
+dependency "nwn-lib-d" version="~>1.1.0"
 
 sourcePaths "source"
 stringImportPaths "res"

@@ -1,9 +1,10 @@
 {
 	"fileVersion": 1,
 	"versions": {
+		"dxml": "0.4.4",
 		"gfm": "8.0.6",
 		"intel-intrinsics": "1.11.15",
-		"nwn-lib-d": "1.0.6",
+		"nwn-lib-d": "1.1.0",
 		"undead": "1.1.8"
 	}
 }

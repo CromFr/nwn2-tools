@@ -4,5 +4,5 @@ license "GPL-3.0"
 copyright "Copyright © 2016, Thibaut CHARLES"
 authors "Thibaut CHARLES"
 
-dependency "nwn-lib-d" version="==0.0.7"
+dependency "nwn-lib-d" version="~>1.1.0"
 dependency "mysql-native" version="~>3.0.0"
