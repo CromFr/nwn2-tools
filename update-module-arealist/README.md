@@ -1,4 +1,4 @@
-# Item price adjuster
+# Module area list updater
 
 Updates the module area list stored inside the module.ifo file. Useful if you
 want add or delete areas and don't want to open the module in the toolset to

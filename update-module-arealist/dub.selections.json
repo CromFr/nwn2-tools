@@ -2,7 +2,7 @@
 	"fileVersion": 1,
 	"versions": {
 		"gfm": "8.0.6",
-		"intel-intrinsics": "1.10.10",
-		"nwn-lib-d": "1.0.4"
+		"intel-intrinsics": "1.11.15",
+		"nwn-lib-d": "1.1.0"
 	}
 }
