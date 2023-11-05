@@ -17,7 +17,7 @@ import nwnlibd.path;
 
 
 
-extern(C) int main2(int numArgs, const char** args, char *rs);
+extern(C) int lzma_main(int numArgs, const char** args, char *rs);
 auto Lzma(string[] args){
 
 	char[800] rs;
@@ -27,7 +27,7 @@ auto Lzma(string[] args){
 	foreach(arg ; args)
 		cargs ~= (arg ~ "\0").dup.ptr;
 
-	auto ret = main2(args.length.to!int, cargs.ptr, rs.ptr);
+	auto ret = lzma_main(args.length.to!int, cargs.ptr, rs.ptr);
 
 	return Tuple!(int,"status", string,"output")(ret, rs.ptr.fromStringz.dup);
 }

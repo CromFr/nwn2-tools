@@ -47,3 +47,7 @@ make
 # Build staging tool
 dub build -b release
 ```
+
+## LZMA SDK
+The LZMA SDK is from 7-zip.org: https://www.7-zip.org/sdk.html
+
